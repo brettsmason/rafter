@@ -1,0 +1,11 @@
+<article id="post-{{ post.ID }}" class="entry entry--{{ post.post_type }}">
+	{% block content %}
+		<header class="entry__header">
+			<h2 class="entry__title"><a href="{{ post.link }}">{{ post.title }}</a></h2>
+		</header>
+
+		<div class="entry__summary">
+			<p>{{ post.preview }}</p>
+		</div>
+	{% endblock %}
+</article>

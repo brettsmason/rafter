@@ -1,0 +1,13 @@
+{% extends "layouts/base.twig" %}
+
+{% block content %}
+	<article id="page-{{ post.ID }}" class="entry entry--page">
+		<header class="entry__header">
+			<h1 class="entry__title">{{ post.title }}</h1>
+		</header>
+
+		<div class="entry__content">
+			{{ post.content }}
+		</div>
+	</article>
+{% endblock %}

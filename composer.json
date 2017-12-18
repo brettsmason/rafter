@@ -1,0 +1,7 @@
+{
+    "name": "brettsmason/rafter",
+    "description": "A minimalistist WordPress starter theme using Timber for faster theme development.",
+    "require": {
+        "timber/timber": "^1.5"
+    }
+}
