@@ -1,0 +1,16 @@
+{% extends 'layouts/base.twig' %}
+
+{% block content %}
+	<article id="post-{{ post.ID }}" class="entry entry--{{ post.post_type }}">
+		<header class="entry__header">
+			<h1 class="entry__title">{{ post.title }}</h1>
+			{% include 'partials/byline.twig' %}
+		</header>
+
+		<div class="entry__content">
+			{{ post.content }}
+		</div>
+	</article>
+
+	{% include 'partials/comments.twig' %}
+{% endblock %}

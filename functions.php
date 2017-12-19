@@ -143,7 +143,9 @@ class RafterTheme extends Timber\Site {
      */
     function add_to_context($context) {
         $context['site'] = $this;
-        $context['menu'] = new Timber\Menu();
+		$context['menu_primary'] = new Timber\Menu( 'primary' );
+		$context['sidebar_primary'] = Timber::get_widgets('primary');
+		$context['sidebar_subsidiary'] = Timber::get_widgets('subsidiary');
 
         return $context;
     }
