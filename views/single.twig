@@ -1,7 +1,7 @@
-{% extends "layouts/base.twig" %}
+{% extends 'layouts/base.twig' %}
 
 {% block content %}
-	<article id="post-{{ post.ID }}" class="entry entry--post">
+	<article id="post-{{ post.ID }}" class="entry entry--{{ post.post_type }}">
 		<header class="entry__header">
 			<h1 class="entry__title">{{ post.title }}</h1>
 		</header>
@@ -10,4 +10,6 @@
 			{{ post.content }}
 		</div>
 	</article>
+
+	{% include 'partials/comments.twig' %}
 {% endblock %}

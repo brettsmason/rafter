@@ -1,4 +1,4 @@
-{% extends "layouts/base.twig" %}
+{% extends 'layouts/base.twig' %}
 
 {% block content %}
 	<article id="page-{{ post.ID }}" class="entry entry--page">
@@ -10,4 +10,6 @@
 			{{ post.content }}
 		</div>
 	</article>
+
+	{% include 'partials/comments.twig' %}
 {% endblock %}

@@ -1,0 +1,13 @@
+<div class="site-branding">
+	{{ fn('the_custom_logo') }}
+
+	{% if fn('is_front_page') and fn('is_home') %}
+		<h1 class="site-title"><a href="{{ site.url }}" rel="home">{{ site.name }}</a></h1>
+	{% else %}
+		<p class="site-title"><a href="{{ site.url }}" rel="home">{{ site.name }}</a></p>
+	{% endif %}
+
+	{% if fn('is_customize_preview') or site.description %}
+		<p class="site-description">{{ site.description }}</p>
+	{% endif %}
+</div>

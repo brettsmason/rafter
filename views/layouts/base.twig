@@ -17,13 +17,21 @@
 			{% include 'partials/header.twig' %}
 		{% endblock %}
 
-		{% block content %}
+		{% block navigation %}
+			<nav id="primary-navigation" class="menu menu--primary" role="navigation">
+				{% include 'partials/menu.twig' with { 'menu': menu.get_items } %}
+			</nav>
 		{% endblock %}
+
+		<main id="main" class="site-main">
+			{% block content %}
+			{% endblock %}
+		</main>
 
 		{% block footer %}
 			{% include 'partials/footer.twig' %}
 		{% endblock %}
 
-		{{ function('wp_footer') }}
+		{{ fn('wp_footer') }}
 	</body>
 </html>

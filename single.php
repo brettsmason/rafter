@@ -1,7 +1,7 @@
 <?php
 $context = Timber::get_context();
-$post = Timber::query_post();
+$post = new Timber\Post();
 $context['post'] = $post;
-$templates = [ 'post-' . $post->ID . '.twig', 'post-' . $post->post_type . '.twig', 'post.twig', 'page.twig' ];
+$templates = [ 'single-' . $post->ID . '.twig', 'single-' . $post->post_type . '.twig', 'single.twig', 'page.twig' ];
 
 Timber::render( $templates, $context );

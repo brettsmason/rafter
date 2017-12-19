@@ -1,0 +1,5 @@
+{% if post.comment_status == "open" or post.comments is not empty %}
+	<div class="post-comments">
+		{{ fn('comments_template') }}
+	</div>
+{% endif %}
