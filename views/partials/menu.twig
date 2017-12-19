@@ -1,7 +1,7 @@
 {% if menu %}
-	<ul class="menu__items">
+	<ul class="{{ (item.get_children) ? 'menu__submenu' : 'menu__items' }}">
 	{% for item in menu %}
-		<li class="menu__item {{ item.classes | join(' ') }}">
+		<li class="menu__item">
 			<a class="menu__link" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
 			{% include 'partials/menu.twig' with { 'menu': item.get_children } %}
 		</li>
