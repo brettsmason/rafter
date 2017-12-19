@@ -1,3 +1,11 @@
 <header id="masthead" class="site-header" role="banner">
-	{% include 'partials/branding.twig' %}
+	<div class="wrapper">
+		{% include 'partials/branding.twig' %}
+
+		<nav id="primary-navigation" class="site-menu" role="navigation">
+			{% block navigation %}
+				{% include 'partials/menu.twig' with { 'menu': menu_primary.get_items } %}
+			{% endblock %}
+		</nav>
+	</div>
 </header>

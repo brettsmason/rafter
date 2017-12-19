@@ -1,0 +1,7 @@
+.screen-reader-text {
+	@include hide-for-sr;
+
+	&:focus {
+		@include show-for-sr;
+	}
+}

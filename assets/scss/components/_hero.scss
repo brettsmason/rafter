@@ -1,0 +1,48 @@
+$hero-height: 500px !default;
+$hero-overlay: rgba(#000, 0.8) !default;
+$hero-text-color: #fff !default;
+
+.hero {
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    min-height: $hero-height;
+
+    &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: $hero-overlay;
+        content: '';
+        z-index: 1;
+    }
+}
+
+    .hero__content {
+        position: relative;
+        z-index: 2;
+        color: $hero-text-color;
+    }
+
+        .hero__title {
+            color: inherit;
+        }
+
+        .hero__text {
+            color: inherit;
+        }
+
+
+.hero--center {
+    justify-content: center;
+    text-align: center;
+}
+
+
+.hero--right {
+    justify-content: right;
+    text-align: right;
+}

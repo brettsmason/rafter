@@ -1,30 +1,30 @@
 {% if posts.pagination.pages is not empty %}
-	<nav class="pagination">
-		<ul class="pagination__items">
+	<nav class="site-pagination">
+		<ul class="pagination">
 			{% if pagination.pages | first and pagination.pages | first.current != true %}
 				<li class="pagination__item pagination__item--first">
-					<a href="{{ pagination.pages | first.link }}">{{ _e('First', 'rafter') }}</a>
+					<a class="pagination__link" href="{{ pagination.pages | first.link }}">{{ _e('First', 'rafter') }}</a>
 				</li>
 			{% else %}
 				<li class="pagination__item pagination__item--first">
-					<a>{{ _e('First', 'rafter') }}</a>
+					<a class="pagination__link">{{ _e('First', 'rafter') }}</a>
 				</li>
 			{% endif %}
 
 			{% if pagination.prev %}
 				<li class="pagination__item pagination__item--previous">
-					<a href="{{ pagination.prev.link }}">{{ _e('Previous', 'rafter') }}</a>
+					<a class="pagination__link" href="{{ pagination.prev.link }}">{{ _e('Previous', 'rafter') }}</a>
 				</li>
 			{% else %}
 				<li class="pagination__item pagination__item--previous pagination__item--disabled">
-					<a>{{ _e('Previous', 'rafter') }}</a>
+					<a class="pagination__link">{{ _e('Previous', 'rafter') }}</a>
 				</li>
 			{% endif %}
 
 			{% for page in pagination.pages %}
 				{% if page.link %}
 					<li class="pagination__item">
-						<a href="pagination__link">{{ page.title }}</a>
+						<a class="pagination__link" href="{{ page.link }}">{{ page.title }}</a>
 					</li>
 				{% elseif page.class == 'dots' %}
 					<li class="pagination-dots">
@@ -39,21 +39,21 @@
 
 			{% if pagination.next %}
 				<li class="pagination__item pagination__item--next">
-					<a href="{{ pagination.next.link }}">{{ _e('Next', 'rafter') }}</a>
+					<a class="pagination__link" href="{{ pagination.next.link }}">{{ _e('Next', 'rafter') }}</a>
 				</li>
 			{% else %}
 				<li class="pagination__item pagination__item--next pagination__item--disabled">
-					<a>{{ _e('Next', 'rafter') }}</a>
+					<a class="pagination__link">{{ _e('Next', 'rafter') }}</a>
 				</li>
 			{% endif %}
 
 			{% if pagination.pages | last and pagination.pages | last.current != true %}
 				<li class="pagination__item pagination__item--last">
-					<a href="{{ pagination.pages | last.link }}">{{ _e('Last', 'rafter') }}</a>
+					<a class="pagination__link" href="{{ pagination.pages | last.link }}">{{ _e('Last', 'rafter') }}</a>
 				</li>
 			{% else %}
 				<li class="pagination__item pagination__item--last pagination__item--disabled">
-					<a>{{ _e('Last', 'rafter') }}</a>
+					<a class="pagination__link">{{ _e('Last', 'rafter') }}</a>
 				</li>
 			{% endif %}
 		</ul>

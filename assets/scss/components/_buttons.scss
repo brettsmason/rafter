@@ -1,0 +1,85 @@
+$button-ghost-border-width: 2px !default;
+
+.button {
+    display: inline-block;
+    vertical-align: middle;
+    font: inherit;
+    text-align: center;
+    margin: 0;
+    cursor: pointer;
+    padding: $global-spacing-small $global-spacing-unit;
+    transition: $global-transition;
+    border-radius: $global-radius;
+}
+
+
+.button--primary {
+    background-color: #4a8ec2;
+
+    &:hover,
+    &:focus {
+        background-color: #3774a2;
+    }
+}
+
+
+.button--secondary {
+    background-color: #2f4054;
+
+    &:hover,
+    &:focus {
+        background-color: #1d2733;
+    }
+}
+
+
+.button--tertiary {
+    background-color: #fff;
+    color: #4a8ec2;
+
+    &:hover,
+    &:focus {
+        color: #3774a2;
+    }
+}
+
+
+.button--ghost {
+    border: $button-ghost-border-width solid currentColor;
+    padding: ($global-spacing-small - $button-ghost-border-width) (global-spacing - $button-ghost-border-width);
+
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+        background: none;
+    }
+
+    &.button--primary {
+        color: $color-primary;
+
+        &:hover,
+        &:focus {
+            color: $color-primary + $global-color-scale;
+        }
+
+    }
+
+    &.button--secondary {
+        color: $color-secondary;
+
+        &:hover,
+        &:focus {
+            color: $color-secondary + $global-color-scale;
+        }
+    }
+
+    &.button--tertiary {
+        color: $color-tertiary;
+
+        &:hover,
+        &:focus {
+            color: $color-tertiary + $global-color-scale;
+        }
+    }
+}

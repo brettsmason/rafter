@@ -14,13 +14,7 @@
 			{% include 'partials/header.twig' %}
 		{% endblock %}
 
-		<nav id="primary-navigation" class="menu menu--primary" role="navigation">
-			{% block navigation %}
-				{% include 'partials/menu.twig' with { 'menu': menu_primary.get_items } %}
-			{% endblock %}
-		</nav>
-
-		<div class="content-area o-wrapper">
+		<div class="content-area wrapper">
 			<main id="site-main" class="site-main">
 				{% block content %}
 				{% endblock %}

@@ -1,0 +1,21 @@
+$breadcrumb-separator: '/' !default;
+$breadcrumb-spacing: 0.5rem !default;
+
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+    .breadcrumb__item {
+        & + &::before {
+            display: inline-block;
+            padding-right: $breadcrumb-spacing;
+            padding-left: $breadcrumb-spacing;
+            content: $breadcrumb-separator;
+        }
+
+        &--current {}
+    }
+
+        .breadcrumb__link {}

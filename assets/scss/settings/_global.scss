@@ -1,0 +1,13 @@
+$global-radius: 3px !default;
+$global-transition: all 300ms ease-in-out !default;
+$global-color-scale: 10% !default;
+
+$global-font-size: 18px !default;
+$global-line-height: 26px !default;
+
+// Spacing units
+$global-spacing: round($global-line-height) !default;
+$global-spacing-tiny: $global-spacing * 0.25 !default;
+$global-spacing-small: $global-spacing * 0.5 !default;
+$global-spacing-large: $global-spacing * 2 !default;
+$global-spacing-huge: $global-spacing * 4 !default;

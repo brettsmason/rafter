@@ -1,0 +1,25 @@
+ul,
+ol {
+	margin: 0 0 $global-spacing $global-spacing;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-left: $global-spacing;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 $global-spacing $global-spacing;
+}

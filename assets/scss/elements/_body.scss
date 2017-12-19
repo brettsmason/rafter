@@ -1,0 +1,9 @@
+$body-bg-color: #fff !default;
+$body-text-color: #111 !default;
+$body-font-family: Arial, "Helvetica Neue", Helvetica, sans-serif !default;
+
+body {
+	background-color: $body-bg-color;
+	color: $body-text-color;
+	font-family: $body-font-family;
+}

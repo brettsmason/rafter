@@ -1,0 +1,26 @@
+// Visually hide an element.
+// Typically used for text specifically for screen readers.
+// [1] - Many screen reader and browser combinations announce broken words as they would appear visually.
+@mixin hide-for-sr {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+    border: 0;
+    word-wrap: normal !important; // [1]
+}
+
+// Reverse the effects of hide-for-sr.
+@mixin show-for-sr {
+    position: static !important;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    clip-path: none;
+}

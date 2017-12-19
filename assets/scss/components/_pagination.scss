@@ -1,0 +1,23 @@
+$pagination-link-padding: 0.5rem 0.75rem !default;
+
+.pagination {
+    display: flex;
+    list-style: none;
+}
+
+    .pagination__item {}
+
+    .pagination__item--start {}
+    
+    .pagination__item--prev {}
+    
+    .pagination__item--next {}
+    
+    .pagination__item--end {}
+    
+    .pagination__item--current {}
+
+        .pagination__link {
+            display: block;
+            padding: $pagination-link-padding;
+        }

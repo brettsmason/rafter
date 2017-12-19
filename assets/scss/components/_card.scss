@@ -1,0 +1,34 @@
+$card-border: 1px solid #eee !default;
+$card-padding: 1rem !default;
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: $card-border;
+}
+  
+    .card__media {
+        margin: 0;
+        padding: 0;
+    }
+
+    .card__header {
+        padding: $card-padding;
+
+        & :last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .card__body {
+        flex: 1 1 auto;
+        padding: $card-padding;
+
+        & :last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .card__title {}
+
+    .card__text {}

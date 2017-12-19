@@ -1,0 +1,28 @@
+$paragraph-margin-bottom: 1rem !default;
+
+p {
+	margin-bottom: $paragraph-margin-bottom;
+}
+
+pre {
+    background: $color-light-gray;
+    display: block;
+    overflow-y: auto;
+	white-space: pre-wrap;
+}
+
+code {
+	background: $color-light-gray;
+}
+
+mark,
+code,
+samp,
+kbd {
+    position: relative;
+    padding: 4px 4px 2px 4px;
+    display: inline-block;
+    line-height: 1;
+	color: $color-black;
+	font-family: Consolas, Monaco, "Courier New", monospace;
+}

@@ -1,0 +1,39 @@
+$media-margin: 1rem !default;
+$media-figure-margin: 1rem !default;
+
+.media {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: $media-margin;
+}
+
+.media__figure {
+    margin-right: $media-figure-margin;
+    margin-left: 0;
+}
+
+.media__body {
+    flex: 1;
+
+    &,
+    > :last-child {
+        margin-bottom: 0;
+    }
+
+    // Nesting
+    > .media {
+        margin-top: $media-margin;
+    }
+}
+
+.media__title {}
+
+
+// Reverse order
+.media--reverse {
+    > .media__figure {
+        margin-right: 0;
+        margin-left: $media-figure-margin;
+        order: 1;
+    }
+}

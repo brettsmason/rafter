@@ -1,0 +1,36 @@
+$menu-link-padding: 0.5rem !default;
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+    .menu__toggle {}
+
+    .menu__item {
+        position: relative;
+    }
+
+    .menu__link {
+        display: block;
+        padding: $menu-link-padding;
+
+        .menu__item--current & {}
+    }
+  
+        .menu__submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+            .menu__item:hover & {
+                display: block;
+            }
+        }
